@@ -3,6 +3,10 @@
 
 // Emotes
 /mob/living/carbon/disarm(mob/living/carbon/target)
+
+	//GS13 EDIT - Adipohazard and adipoluri effect
+	disarm_fatten(target)
+
 	if(zone_selected == BODY_ZONE_PRECISE_MOUTH)
 		var/target_on_help_and_unarmed = !target.combat_mode && !target.get_active_held_item()
 		if(target_on_help_and_unarmed || HAS_TRAIT(target, TRAIT_RESTRAINED))
